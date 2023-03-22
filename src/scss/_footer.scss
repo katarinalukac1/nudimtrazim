@@ -1,0 +1,102 @@
+.footer {
+    background-color: $primary-blue;
+    color: $bg-blue;
+
+    .footer__container {
+        max-width: 960px;
+        margin: 0 auto;
+
+        .footer__content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 60px 0;
+
+            .logo {
+                .logo__link {
+                    color: $bg-blue;
+                    font-size: 22px;
+                    font-weight: 700;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+
+            .footer__social, .footer__policy {
+                .footer__title-col {
+                    margin: 0;
+                    text-transform: uppercase;
+                    margin-bottom: 25px;
+                }
+
+                .footer__item {
+                    a {
+                        color: $bg-blue;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .footer__policy {
+                .footer__item {
+                    display: block;
+
+                    &:not(:last-child) {
+                        margin-bottom: 12px;
+                    }
+
+                    .footer__link {
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            transform: scaleX(0);
+                            height: 2px;
+                            bottom: 0;
+                            left: 0;
+                            background-color: $bg-blue;
+                            transform-origin: bottom right;
+                            transition: transform .3s ease-out;
+                        }
+
+                        &:hover {
+                            &::after {
+                                transform: scaleX(1);
+                                transform-origin: bottom left;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer__social {
+                .footer__item {
+                    .footer__link-social {
+                        i {
+                            font-size: 28px !important;
+                            color: $bg-blue !important;
+                        }
+
+                        
+                        &:hover {
+                            transition: color .3s ease;
+                            i {
+                                color: $white !important;
+                            }
+                        }
+                    }
+
+                    &:not(:last-child) {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+
+        .footer__copy {
+            text-align: center;
+        }
+    }
+}

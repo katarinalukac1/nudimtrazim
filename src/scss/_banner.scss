@@ -1,0 +1,33 @@
+.banner {
+    background-color: $bg-blue;
+    padding: 70px 0 230px 0;
+    color: $primary-blue;
+
+    .banner__container {
+        display: flex;
+        justify-content: space-between;
+        
+        .banner__content {
+            .banner__title {
+                font-size: 48px;
+                max-width: 366px;
+            }
+
+            .banner__text {
+                font-size: 18px;
+                max-width: 550px;
+                font-weight: 500;
+                margin-bottom: 40px;
+                line-height: 1.5;
+            }
+
+            .banner__links {
+                button {
+                    &:first-child {
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
