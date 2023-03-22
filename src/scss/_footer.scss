@@ -12,7 +12,16 @@
             justify-content: space-between;
             padding: 60px 0;
 
+            @include mq(768) {
+                display: block;
+                text-align: center;
+            }
+
             .logo {
+                @include mq(768) {
+                    margin-bottom: 50px;
+                }
+
                 .logo__link {
                     color: $bg-blue;
                     font-size: 22px;
@@ -69,6 +78,10 @@
                         }
                     }
                 }
+
+                @include mq(768) {
+                    margin-bottom: 50px;
+                }
             }
 
             .footer__social {
@@ -97,6 +110,7 @@
 
         .footer__copy {
             text-align: center;
+            margin-bottom: 40px;
         }
     }
 }

@@ -22,11 +22,19 @@ header {
                 list-style: none;
                 display: flex;
 
+                @include mq(768) {
+                    display: block;
+                }
+
                 .navbar__list-item {
                     cursor: pointer;
 
                     &:not(:last-child) {
                         margin-right: 50px;
+
+                        @include mq(768) {
+                            margin-right: 0;
+                        }
                     }
 
                     .navbar__list-link {

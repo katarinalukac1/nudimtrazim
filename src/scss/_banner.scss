@@ -3,9 +3,17 @@
     padding: 70px 0 230px 0;
     color: $primary-blue;
 
+    @include mq(768) {
+        padding: 0px 0 100px 0;
+    }
+
     .banner__container {
         display: flex;
         justify-content: space-between;
+
+        @include mq(768) {
+            display: block;
+        }
         
         .banner__content {
             .banner__title {
@@ -27,6 +35,18 @@
                         margin-right: 15px;
                     }
                 }
+            }
+        }
+
+        .banner__hero {
+            .banner__image {
+                @include mq(768) {
+                    width: calc(100vw - 40px);
+                }
+            }
+
+            @include mq(768) {
+                margin-top: 15px;
             }
         }
     }
