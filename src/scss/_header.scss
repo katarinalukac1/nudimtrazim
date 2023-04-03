@@ -8,32 +8,46 @@ header {
         align-items: center;
     
         .logo {
+            @include mq(991) {
+                margin-bottom: auto;
+            }
+
             .logo__link {
                 color: $primary-blue;
                 font-size: 32px;
                 font-weight: 700;
                 text-decoration: none;
                 cursor: pointer;
+                text-shadow: $primary-blue 1px 0 3px;
             }
         }
 
         .navbar {
+            @include mq(991) {
+                justify-content: right;
+            }
+
             .navbar__list {
                 list-style: none;
                 display: flex;
+                align-items: center;
 
-                @include mq(768) {
+                @include mq(991) {
                     display: block;
                 }
 
                 .navbar__list-item {
                     cursor: pointer;
+                    margin-right: 40px;
 
-                    &:not(:last-child) {
-                        margin-right: 50px;
+                    @include mq(991) {
+                        text-align: right;
+                        margin-bottom: 30px;
+                    }
 
-                        @include mq(768) {
-                            margin-right: 0;
+                    &:not(:last-of-type) {
+                        @include mq(991) {
+                            margin-bottom: 10px;
                         }
                     }
 
@@ -62,6 +76,26 @@ header {
                                 transform-origin: bottom left;
                             }
                         }
+                    }
+                }
+
+                .button {
+                    @include mq(991) {
+                        margin-left: auto;
+                        display: block;
+                    }
+                }
+            }
+
+            .navbar-toggler {
+                @include mq(991) {
+                    display: block;
+                    margin-bottom: 20px;
+                }
+
+                .navbar-toggler-icon {
+                    .fa-bars {
+                        font-size: 24px !important;
                     }
                 }
             }

@@ -1,6 +1,6 @@
 .banner {
     background-color: $bg-blue;
-    padding: 70px 0 230px 0;
+    padding: 70px 0;
     color: $primary-blue;
 
     @include mq(768) {
