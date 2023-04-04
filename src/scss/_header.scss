@@ -1,6 +1,26 @@
 header {
     background-color: $bg-blue;
-    padding: 30px 0;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: background-color 0.3s ease-in-out;
+
+    &.sticky {
+        background-color: $white !important;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+        @include mq(991) {
+            padding-bottom: 0;
+        }
+
+        .button:hover {
+            background-color: $white;
+        }
+    }
 
     .header__container {
         display: flex;
@@ -102,4 +122,8 @@ header {
             }
         }
     }
+}
+
+header.sticky {
+    height: $sticky-header-height;
 }
