@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Outfit";
   src: url("../fonts/Outfit-Regular.woff2") format("woff2"), url("../fonts/Outfit-Regular.woff") format("woff");
@@ -240,6 +241,7 @@ header .header__container .navbar .navbar__list .navbar__list-item {
   header .header__container .navbar .navbar__list .navbar__list-item {
     text-align: right;
     margin-bottom: 30px;
+    margin-right: 0;
   }
 }
 @media screen and (max-width: 991px) {
@@ -485,4 +487,68 @@ header .header__container .navbar .navbar-toggler .navbar-toggler-icon .fa-bars 
 .general .general__container .general__content .general__card .general__title span:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.about {
+  background-color: #EBF0FA;
+  margin-bottom: 50px;
+}
+.about .about__container .about__content {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  color: #03254E;
+}
+@media screen and (max-width: 768px) {
+  .about .about__container .about__content {
+    display: block;
+  }
+}
+.about .about__container .about__content .about__card:not(:last-child) {
+  margin-right: 30px;
+}
+@media screen and (max-width: 768px) {
+  .about .about__container .about__content .about__card:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+.about .about__container .about__content .about__card .about__card-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.about .about__container .about__content .about__card .about__card-text {
+  font-weight: 600;
+}
+
+.question-block .question-block__container .question-block__content {
+  text-align: center;
+  position: relative;
+}
+.question-block .question-block__container .question-block__content::after {
+  position: absolute;
+  content: "Imaš pitanje?";
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  display: block;
+  font-size: 48px;
+  font-weight: 600;
+  color: #03254E;
+}
+@media screen and (max-width: 768px) {
+  .question-block .question-block__container .question-block__content::after {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .question-block .question-block__container .question-block__content::after {
+    font-size: 28px;
+    top: 40px;
+  }
+}
+.question-block .question-block__container .question-block__content .question-block__image {
+  max-width: -webkit-fill-available;
 }

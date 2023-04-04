@@ -1,0 +1,38 @@
+.about {
+    background-color: $bg-blue;
+    margin-bottom: 50px;
+
+    .about__container {
+        .about__content {
+            padding: 50px 0;
+            display: flex;
+            justify-content: space-between;
+            color: $primary-blue;
+
+            @include mq(768) {
+                display: block;
+            }
+
+            .about__card {
+
+                &:not(:last-child) {
+                    margin-right: 30px;
+
+                    @include mq(768) {
+                        margin-right: 0;
+                        margin-bottom: 30px;
+                    }
+                }
+
+                .about__card-title {
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                }
+
+                .about__card-text {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

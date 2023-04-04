@@ -1,0 +1,35 @@
+.question-block {
+    .question-block__container {
+        .question-block__content {
+            text-align: center;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "Imaš pitanje?";
+                top: 70px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: auto;
+                height: auto;
+                display: block;
+                font-size: 48px;
+                font-weight: 600;
+                color: $primary-blue;
+
+                @include mq(768) {
+                    font-size: 32px;
+                }
+
+                @include mq(575) {
+                    font-size: 28px;
+                    top: 40px;
+                }
+            }
+
+            .question-block__image {
+                max-width: -webkit-fill-available;
+            }
+        }
+    }
+}
